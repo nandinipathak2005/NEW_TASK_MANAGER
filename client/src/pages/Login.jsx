@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { toast } from "sonner";
 import { Button, Loading, Textbox } from "../components";
 import { useLoginMutation } from "../redux/slices/api/authApiSlice";
@@ -104,6 +104,10 @@ const Login = () => {
             )}
           </form>
         </div>
+        <p>
+  Don't have an account? <Link to="/register">Register</Link>
+</p>
+
       </div>
     </div>
   );
